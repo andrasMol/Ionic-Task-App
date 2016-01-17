@@ -17,3 +17,6 @@ extension to allow the requests to go through
 ```
 Allow-Control-Allow-Origin: * [https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi?hl=en]
 ```
+###Random points
+##Sass
+The project is using sass and the main sass file can be found in /scss/ionic.app.scss

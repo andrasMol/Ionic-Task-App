@@ -1,14 +1,35 @@
 <ion-view view-title="MyTasks">
-  <ion-content>
+  <ion-content class="tasks-page">
     <ion-spinner ng-if="loading"></ion-spinner>
     <div class="error" ng-if="error">
       {{error}}
     </div>
-    <ion-list>
-      <ion-item ng-repeat="myTask in myTasks" href="#/app/myTasks/{{myTask.id}}">
-        {{myTask.group_name}}
-        {{myTask.task_name}}
-      </ion-item>
+    <ion-list class="list-inset">
+      <div class="card" ng-repeat="myTask in myTasks" ng-href="#/app/myTasks/{{myTask.id}}">
+        <div class="row">
+
+          <div class="col-20">
+            <div class="percent-complete">
+              <div class="text">{{myTask.percent_compete}}%</div>
+            </div>
+
+          </div>
+          <div class="col">
+            <div class="group-name">
+              {{myTask.group_name}}
+            </div>
+            <div class="task-name">
+              {{myTask.task_name}}
+            </div>
+            <div class="due-in">
+              <span ng-if="myTask.days_left == -1" class="due-today">Due Today</span>
+              <span ng-if="myTask.days_left == 0">Due Tomorrow</span>
+              <span ng-if="myTask.days_left > 0">Due in {{myTask.days_left}} days</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </ion-list>
   </ion-content>
 </ion-view>

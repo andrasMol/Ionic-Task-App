@@ -21,3 +21,50 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
 
+/* Colours */
+$red: #C54A35;
+$light-grey: #9B9B9B;
+$background-grey: #F3F3F3;
+
+/* Variables */
+$small-font: .7rem;
+
+body {
+  color: #1D1D26;
+}
+
+.percent-complete {
+  width: 70%;
+  background: steelblue;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  padding: .4rem;
+  border-radius: .2rem;
+
+  .text {
+    text-align: center;
+  }
+}
+
+.group-name {
+  font-size: $small-font;
+  color: $light-grey;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.due-today {
+  color: $red;
+}
+
+.due-in {
+  color: $light-grey;
+  font-size: $small-font;
+}
+
+.tasks-page {
+  background: $background-grey;
+}
