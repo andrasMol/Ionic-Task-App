@@ -1,5 +1,9 @@
 <ion-view view-title="Task">
   <ion-content>
-    <h1>Individual Task</h1>
+    <div class="error" ng-if="error">
+      {{error}}
+    </div>
+    {{myTask}}
+
   </ion-content>
 </ion-view>
