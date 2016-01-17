@@ -1,5 +1,9 @@
 <ion-view view-title="MyTasks">
   <ion-content>
+    <ion-spinner ng-if="loading"></ion-spinner>
+    <div class="error" ng-if="error">
+      {{error}}
+    </div>
     <ion-list>
       <ion-item ng-repeat="myTask in myTasks" href="#/app/myTasks/{{myTask.id}}">
         {{myTask.title}}
