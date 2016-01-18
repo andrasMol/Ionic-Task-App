@@ -37,12 +37,13 @@ $purple1: #D5A8E7;
 $dark-blue2: darken($blue2, 30%);
 $dark-green1: darken($green1, 30%);
 $dark-purple1: darken($purple1, 30%);
+$black: #1D1D26;
 
 /* Variables */
 $small-font: .7rem;
 
 body {
-  color: #1D1D26;
+  color: $black;
 }
 
 .percent-complete {
@@ -90,6 +91,11 @@ body {
   font-size: 1rem;
   margin-bottom: -.6rem;
   margin-top: -.5rem;
+}
+
+.outer-link {
+  text-decoration: none;
+  color: $black;
 }
 
 .due-today {

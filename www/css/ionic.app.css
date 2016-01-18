@@ -9778,6 +9778,10 @@ body {
   margin-bottom: -.6rem;
   margin-top: -.5rem; }
 
+.outer-link {
+  text-decoration: none;
+  color: #1D1D26; }
+
 .due-today {
   color: #C54A35; }
 
