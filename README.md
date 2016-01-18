@@ -1,5 +1,10 @@
 #Ionic Task App
 
+## To View
+I was able to deploy the whole project to a firebase website [https://teamgantt-project.firebaseapp.com]. Clearly an ionic project is not meant to be deployed as a website so it's not properly minified, etc... However, since getting an ionic project running on an ios/android device requires installing a bunch of software and then going through the hoops of publishing to the store, this was the easiest method to be able to show people what it looks like.
+####CORS
+Because the requests going from the project to the teamgantt server are CORS requests, you need to have a chrome extension installed to allow them to go through. This is not an issue once the project is deployed to a phone. Please see below for the Allow-Control-Allow-Origin chrome extension.
+
 ## To Run
 ```
 First install npm [https://nodejs.org/en/]
