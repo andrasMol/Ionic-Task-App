@@ -9731,6 +9731,9 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
+.bar.bar-stable {
+  background: white; }
+
 /* Colours */
 /* Variables */
 body {
@@ -9738,14 +9741,24 @@ body {
 
 .percent-complete {
   width: 70%;
-  background: steelblue;
+  background: #BBE6EF;
   margin-left: auto;
   margin-right: auto;
   margin-top: 1rem;
   padding: .4rem;
-  border-radius: .2rem; }
+  border-radius: 0.2rem;
+  height: 2rem;
+  position: relative; }
+  .percent-complete .complete {
+    position: absolute;
+    height: 100%;
+    margin-left: -.4rem;
+    margin-top: -.4rem;
+    border-radius: 0.2rem; }
   .percent-complete .text {
-    text-align: center; }
+    text-align: center;
+    z-index: 1;
+    position: relative; }
 
 .group-name {
   font-size: 0.7rem;
@@ -9755,6 +9768,16 @@ body {
   overflow: hidden;
   text-overflow: ellipsis; }
 
+.task-name {
+  font-weight: 500; }
+
+.project-name {
+  margin-left: .6rem;
+  font-weight: 400;
+  font-size: 1rem;
+  margin-bottom: -.6rem;
+  margin-top: -.5rem; }
+
 .due-today {
   color: #C54A35; }
 
@@ -9762,5 +9785,31 @@ body {
   color: #9B9B9B;
   font-size: 0.7rem; }
 
+.comment-image {
+  width: 15px;
+  height: 12.5px;
+  position: relative;
+  top: .2rem;
+  left: .4rem; }
+
+.comment-count {
+  position: relative;
+  left: .4rem; }
+
 .tasks-page {
   background: #F3F3F3; }
+
+.blue2 {
+  background: #BBE6EF; }
+  .blue2 .complete {
+    background: #3fb8d2; }
+
+.green1 {
+  background: #D8E5AE; }
+  .green1 .complete {
+    background: #9fbd3d; }
+
+.purple1 {
+  background: #D5A8E7; }
+  .purple1 .complete {
+    background: #9935c1; }

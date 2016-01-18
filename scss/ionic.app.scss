@@ -21,10 +21,22 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
 
+// overwrite the navbar color
+.bar.bar-stable {
+  background: white;
+}
+
 /* Colours */
 $red: #C54A35;
 $light-grey: #9B9B9B;
 $background-grey: #F3F3F3;
+$border-radius: .2rem;
+$blue2: #BBE6EF;
+$green1: #D8E5AE;
+$purple1: #D5A8E7;
+$dark-blue2: darken($blue2, 30%);
+$dark-green1: darken($green1, 30%);
+$dark-purple1: darken($purple1, 30%);
 
 /* Variables */
 $small-font: .7rem;
@@ -35,15 +47,27 @@ body {
 
 .percent-complete {
   width: 70%;
-  background: steelblue;
+  background: $blue2;
   margin-left: auto;
   margin-right: auto;
   margin-top: 1rem;
   padding: .4rem;
-  border-radius: .2rem;
+  border-radius: $border-radius;
+  height: 2rem;
+  position: relative;
+
+  .complete {
+    position: absolute;
+    height: 100%;
+    margin-left: -.4rem;
+    margin-top: -.4rem;
+    border-radius: $border-radius;
+  }
 
   .text {
     text-align: center;
+    z-index: 1;
+    position: relative;
   }
 }
 
@@ -56,6 +80,18 @@ body {
   text-overflow: ellipsis;
 }
 
+.task-name {
+  font-weight: 500;
+}
+
+.project-name {
+  margin-left: .6rem;
+  font-weight: 400;
+  font-size: 1rem;
+  margin-bottom: -.6rem;
+  margin-top: -.5rem;
+}
+
 .due-today {
   color: $red;
 }
@@ -65,6 +101,38 @@ body {
   font-size: $small-font;
 }
 
+.comment-image {
+  width: 15px; // these are pixels because I'm copying from the sketch file
+  height: 12.5px;
+  position: relative;
+  top: .2rem;
+  left: .4rem;
+}
+
+.comment-count {
+  position: relative;
+  left: .4rem;
+}
+
 .tasks-page {
   background: $background-grey;
+}
+
+.blue2 {
+  background: $blue2;
+  .complete {
+    background: $dark-blue2;
+  }
+}
+.green1 {
+  background: $green1;
+  .complete {
+    background: $dark-green1;
+  }
+}
+.purple1 {
+  background: $purple1;
+  .complete {
+    background: $dark-purple1;
+  }
 }

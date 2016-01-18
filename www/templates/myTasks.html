@@ -4,32 +4,39 @@
     <div class="error" ng-if="error">
       {{error}}
     </div>
-    <ion-list class="list-inset">
-      <div class="card" ng-repeat="myTask in myTasks" ng-href="#/app/myTasks/{{myTask.id}}">
-        <div class="row">
+    <ion-list class="list-inset" ng-if="!loading">
+      <div ng-repeat="(projectName, projectTasks) in projects">
+        <h4 class="project-name">{{projectName}}</h4>
+        <div class="card" ng-repeat="myTask in projectTasks.tasks" ng-href="#/app/myTasks/{{myTask.id}}">
+          <div class="row">
 
-          <div class="col-20">
-            <div class="percent-complete">
-              <div class="text">{{myTask.percent_compete}}%</div>
+            <div class="col-20">
+              <div class="percent-complete {{myTask.color}}">
+                <div class="complete" ng-style="{{myTask.style}}"></div>
+                <div class="text">{{myTask.percent_compete}}%</div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="group-name">
+                {{myTask.group_name}}
+              </div>
+              <div class="task-name">
+                {{myTask.task_name}}
+              </div>
+              <div class="due-in">
+                <span ng-if="myTask.days_left == -1" class="due-today">Due Today</span>
+                <span ng-if="myTask.days_left == 0">Due Tomorrow</span>
+                <span ng-if="myTask.days_left > 0">Due in {{myTask.days_left}} days</span>
+                <span ng-if="myTask.comments.count > 0">
+                  <img src="img/comment.png" class="comment-image">
+                  <span class="comment-count">{{myTask.comments.count}}</span>
+                </span>
+              </div>
             </div>
 
           </div>
-          <div class="col">
-            <div class="group-name">
-              {{myTask.group_name}}
-            </div>
-            <div class="task-name">
-              {{myTask.task_name}}
-            </div>
-            <div class="due-in">
-              <span ng-if="myTask.days_left == -1" class="due-today">Due Today</span>
-              <span ng-if="myTask.days_left == 0">Due Tomorrow</span>
-              <span ng-if="myTask.days_left > 0">Due in {{myTask.days_left}} days</span>
-            </div>
-          </div>
-
         </div>
-      </div>
+      </div> <!-- end repeat of projects -->
     </ion-list>
   </ion-content>
 </ion-view>

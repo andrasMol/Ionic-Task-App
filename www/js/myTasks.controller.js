@@ -1,7 +1,7 @@
 angular.module('tasks.controllers')
 
 .controller('MyTasksCtrl', function($scope, MyTasksService) {
-
+  $scope.projects = {};
   $scope.loading = true;
   $scope.error = '';
 
@@ -12,6 +12,7 @@ angular.module('tasks.controllers')
       console.log(response);
       if (response.data.tasks && response.data.tasks.length > 0) {
         $scope.myTasks = response.data.tasks;
+        computeExtraProperties();
       } else {
         $scope.showError();
       }
@@ -27,4 +28,15 @@ angular.module('tasks.controllers')
     $scope.error = 'Something went wrong. Sorry!';
   }
 
+  function computeExtraProperties() {
+    for (var i = 0; i < $scope.myTasks.length; i++) {
+      if (!$scope.projects[$scope.myTasks[i].project_name]) {
+        $scope.projects[$scope.myTasks[i].project_name] = {};
+        $scope.projects[$scope.myTasks[i].project_name].tasks = [];
+      }
+      $scope.projects[$scope.myTasks[i].project_name].tasks.push($scope.myTasks[i]);
+      $scope.myTasks[i].style = "{width:'" + $scope.myTasks[i].percent_compete + "%'}";
+    }
+    console.log($scope.projects);
+  }
 })

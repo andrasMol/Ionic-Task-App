@@ -20,3 +20,7 @@ Allow-Control-Allow-Origin: * [https://chrome.google.com/webstore/detail/allow-c
 ###Random points
 ##Sass
 The project is using sass and the main sass file can be found in /scss/ionic.app.scss
+##Colors
+Only created the 3 different colors for blue, green and purple because I didn't have the time to make all the classes and things for all the different possible colors.
+##Fonts
+I didn't load in the fonts from the sketch file due to time constraints, so things might look a little different from the sketch file
