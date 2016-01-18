@@ -1,4 +1,5 @@
-<ion-view view-title="{{myTask.project_name}}">
+<ion-view>
+  <ion-nav-title>{{myTask.project_name}}</ion-nav-title>
   <ion-content class="task-page">
     <ion-spinner ng-if="loading"></ion-spinner>
     <div class="error" ng-if="error">
