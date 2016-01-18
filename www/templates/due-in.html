@@ -1,0 +1,13 @@
+<div class="due-in">
+  <span ng-if="myTask.days_left == -1" class="due-today">Due Today</span>
+  <span ng-if="myTask.days_left == 0">Due Tomorrow</span>
+  <span ng-if="myTask.days_left > 0">Due in {{myTask.days_left}} days</span>
+  <span ng-if="myTask.comments.count > 0">
+    <img src="img/comment.png" class="comment-image">
+    <span class="comment-count">{{myTask.comments.count}}</span>
+  </span>
+  <span ng-if="myTask.documents.count > 0" class="documents">
+    <span class="ion-android-attach attachment"></span>
+    <span class="comment-count">{{myTask.documents.count}}</span>
+  </span>
+</div>

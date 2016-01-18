@@ -9758,7 +9758,14 @@ body {
   .percent-complete .text {
     text-align: center;
     z-index: 1;
-    position: relative; }
+    position: relative;
+    font-size: .8rem;
+    font-weight: 500; }
+
+.percent-complete-individual-task {
+  width: 100%;
+  margin-top: -1px;
+  border-radius: 0; }
 
 .group-name {
   font-size: 0.7rem;
@@ -9817,3 +9824,40 @@ body {
   background: #D5A8E7; }
   .purple1 .complete {
     background: #9935c1; }
+
+.task-page {
+  background: #F3F3F3; }
+
+.task-content {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem; }
+
+.individual-task-name {
+  padding-bottom: 0; }
+
+.individual-group-name {
+  margin-top: -.8rem; }
+
+.dates {
+  margin-top: .5rem;
+  font-size: .8rem; }
+  .dates .date {
+    color: #9B9B9B; }
+
+.people {
+  margin-top: .5rem; }
+  .people .pic {
+    width: 2.2rem;
+    height: 2.2rem;
+    margin-right: .2rem;
+    border-radius: 50%; }
+
+.documents {
+  margin-left: 1rem; }
+  .documents .attachment:before {
+    position: relative;
+    top: .1rem;
+    opacity: .7;
+    font-size: 1rem;
+    margin-right: -.4rem; }

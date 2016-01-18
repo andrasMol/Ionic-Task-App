@@ -38,6 +38,7 @@ $dark-blue2: darken($blue2, 30%);
 $dark-green1: darken($green1, 30%);
 $dark-purple1: darken($purple1, 30%);
 $black: #1D1D26;
+$comment-img-grey: #CECECE;
 
 /* Variables */
 $small-font: .7rem;
@@ -69,7 +70,15 @@ body {
     text-align: center;
     z-index: 1;
     position: relative;
+    font-size: .8rem;
+    font-weight: 500;
   }
+}
+
+.percent-complete-individual-task {
+  width: 100%;
+  margin-top: -1px;
+  border-radius: 0;
 }
 
 .group-name {
@@ -140,5 +149,57 @@ body {
   background: $purple1;
   .complete {
     background: $dark-purple1;
+  }
+}
+
+.task-page {
+  background: $background-grey;
+}
+
+.task-content {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+}
+
+.individual-task-name {
+  padding-bottom: 0;
+}
+.individual-group-name {
+  margin-top: -.8rem;
+}
+
+.dates {
+  margin-top: .5rem;
+  font-size: .8rem;
+
+  .date {
+    color: $light-grey;
+  }
+}
+
+.people {
+  margin-top: .5rem;
+
+  .pic {
+    width: 2.2rem;
+    height: 2.2rem;
+    margin-right: .2rem;
+    border-radius: 50%;
+  }
+}
+
+.documents {
+  margin-left: 1rem;
+
+  .attachment {
+
+    &:before{
+      position: relative;
+      top: .1rem;
+      opacity: .7;
+      font-size: 1rem;
+      margin-right: -.4rem;
+    }
   }
 }

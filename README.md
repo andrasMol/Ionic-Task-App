@@ -2,13 +2,21 @@
 
 ## To Run
 ```
+First install npm [https://nodejs.org/en/]
+```
+Then
+```
 $ npm install -g cordova ionic
 ```
 Then you want to clone the repo
 ```
 git clone https://github.com/andrasMol/Ionic-Task-App.git
 ```
-Next navigate to the new project folder and at the root level do
+Next navigate to the new project folder and at the root level
+```
+npm install
+```
+This will install all the npm packages that we have
 ```
 ionic serve
 ```

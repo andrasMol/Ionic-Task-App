@@ -1,12 +1,34 @@
-<ion-view view-title="Task">
-  <ion-content>
+<ion-view view-title="{{myTask.project_name}}">
+  <ion-content class="task-page">
+    <ion-spinner ng-if="loading"></ion-spinner>
     <div class="error" ng-if="error">
       {{error}}
     </div>
-    <h1>{{myTask.task_name}}</h1>
-    <p>
-      {{myTask.group_name}}
-    </p>
+
+    <div class="card" ng-if="!loading">
+      <div class="percent-complete percent-complete-individual-task {{myTask.color}}">
+        <div class="complete" ng-style="{{myTask.style}}"></div>
+        <div class="text">{{myTask.percent_compete}}%</div>
+      </div>
+      <div class="task-content">
+        <h4 class="individual-task-name">{{myTask.task_name}}</h4>
+        <div class="group-name individual-group-name">
+          {{myTask.group_name}}
+        </div>
+        <div class="dates">
+          <span class="date-label">Started: </span><span class="date">{{myTask.start_date}}</span><br/>
+          <span class="date-label">Due: </span><span class="date">{{myTask.end_date}}</span>
+        </div>
+        <due-in my-task="myTask"></due-in>
+
+        <div class="people">
+          <div class="people-title">
+            People:
+          </div>
+          <img ng-src="https://teamgantt.com/{{resource.pic}}" ng-repeat="resource in myTask.resources" class="pic">
+        </div>
+      </div>
+    </div>
 
   </ion-content>
 </ion-view>
