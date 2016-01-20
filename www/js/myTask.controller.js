@@ -9,7 +9,6 @@ angular.module('tasks.controllers')
         $scope.loading = false;
         $scope.myTask = task;
         $scope.myTask.style = "{width:'" + $scope.myTask.percent_compete + "%'}";
-        console.log($scope.myTask);
       },
       function failure(err) {
         console.log(err);

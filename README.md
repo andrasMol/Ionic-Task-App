@@ -56,3 +56,6 @@ I only created 3 different colors for blue2, green1 and purple2 to save time.
 
 ####Fonts
 I didn't load in the fonts from the sketch file due to time constraints, so things might look a little different from the sketch file.
+
+####Known Issues
+Sometimes the chrome device emulator fails to properly handle drag scrolling (holding the mouse button down and moving it up and down to simulate dragging with a finger). As far as I can tell this a chrome bug since I've seen it on other ionic apps, but never on an actual deployed to phone app.

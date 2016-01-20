@@ -1,4 +1,5 @@
 <div class="due-in">
+  <span ng-if="myTask.days_left < -1" class="due-today">{{myTask.days_left}} days left</span>
   <span ng-if="myTask.days_left == -1" class="due-today">Due Today</span>
   <span ng-if="myTask.days_left == 0">Due Tomorrow</span>
   <span ng-if="myTask.days_left > 0">Due in {{myTask.days_left}} days</span>

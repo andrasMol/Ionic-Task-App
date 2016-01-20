@@ -9,7 +9,6 @@ angular.module('tasks.controllers')
   MyTasksService.getMyTasks().then(
     function success(response) {
       $scope.loading = false;
-      console.log(response);
       if (response.data.tasks && response.data.tasks.length > 0) {
         $scope.myTasks = response.data.tasks;
         computeExtraProperties();
@@ -37,6 +36,5 @@ angular.module('tasks.controllers')
       $scope.projects[$scope.myTasks[i].project_name].tasks.push($scope.myTasks[i]);
       $scope.myTasks[i].style = "{width:'" + $scope.myTasks[i].percent_compete + "%'}";
     }
-    console.log($scope.projects);
   }
 })
