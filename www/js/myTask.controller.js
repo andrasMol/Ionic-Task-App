@@ -14,7 +14,7 @@ angular.module('tasks.controllers')
       function failure(err) {
         console.log(err);
         $scope.loading = false;
-        $scope.error = 'Sorry, something went wrong';
+        $scope.error = 'Sorry, something went wrong. Make sure you have the CORS chrome extension installed!';
       }
     )
   }

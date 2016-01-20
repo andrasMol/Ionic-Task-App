@@ -25,7 +25,7 @@ angular.module('tasks.controllers')
   );
 
   $scope.showError = function() {
-    $scope.error = 'Something went wrong. Sorry!';
+    $scope.error = 'Something went wrong. Sorry! Make sure you have the CORS chrome extension installed!';
   }
 
   function computeExtraProperties() {
